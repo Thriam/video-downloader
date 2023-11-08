@@ -78,8 +78,8 @@ button:hover {
     </form>
 	<br>
     <form onsubmit="openGeneratedURL1(event)">
-        <label for="url1">Enter URL to download videos:</label>
-        <input type="text" id="url1" required>
+        <label for="url">Enter URL to download videos:</label>
+        <input type="text" id="url" required>
         <button type="submit">Advanced Download</button>
     </form>
 <footer class="footer">
@@ -96,8 +96,8 @@ button:hover {
         }
 	function openGeneratedURL1(event) {
             event.preventDefault();
-            const url = document.getElementById('url1').value;
-            const encodedURL = encodeURIComponent(url1);
+            const url = document.getElementById('url').value;
+            const encodedURL = encodeURIComponent(url);
              const googleCacheURL = `https://en.fetchfile.net/?url=${encodedURL}`;
            // Open the generated URL in a new tab or window
             window.open(googleCacheURL, '_blank');
