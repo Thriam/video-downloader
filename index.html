@@ -76,6 +76,12 @@ button:hover {
         <input type="text" id="url" required>
         <button type="submit">Download</button>
     </form>
+	<br>
+    <form onsubmit="openGeneratedURL1(event)">
+        <label for="url1">Enter URL to download videos:</label>
+        <input type="text" id="url1" required>
+        <button type="submit">Advanced Download</button>
+    </form>
 <footer class="footer">
                 <p class="infos">© <script>document.write(new Date().getFullYear())</script>, Designed and Developed by <a href="https://thriam.netlify.app"> Thriam bakesvar B</a></p> 
     </footer>
@@ -85,6 +91,14 @@ button:hover {
             const url = document.getElementById('url').value;
             const encodedURL = encodeURIComponent(url);
              const googleCacheURL = `https://9xbuddy.com/process?url=${encodedURL}`;
+           // Open the generated URL in a new tab or window
+            window.open(googleCacheURL, '_blank');
+        }
+	function openGeneratedURL1(event) {
+            event.preventDefault();
+            const url = document.getElementById('url1').value;
+            const encodedURL = encodeURIComponent(url1);
+             const googleCacheURL = `https://en.fetchfile.net/?url=${encodedURL}`;
            // Open the generated URL in a new tab or window
             window.open(googleCacheURL, '_blank');
         }
